@@ -1,6 +1,6 @@
 package less1;
 
-public class less1 {
+public class Less1 {
 
 	public static void main(String[] args) {
 		int[] array = new int[10];
@@ -13,25 +13,30 @@ public class less1 {
 		for(int i=0;i<array.length;i++)
 		{
 		array[i] = ((int)(Math.random()*5)+1);		
-		sum = sum + array[i];
+		sum += array[i];
 		System.out.print(array[i]+" ");
 		}
 		System.out.println();
 		System.out.println("сумм "+ sum);
 		for(int i=0;i<array.length;i++)
 		{
+			if(k2<5)
+			{
+			k2++;
 			k=0;
 			for(int j=0;j<array.length;j++)
-		{
-			if(array[i] == array[j])
 			{
+				if(array[j] == k2 & k2<6)
+				{
 				k++;				
+				}
+				
+			}
+			
+			System.out.println("число "+k2+" колл "+k+" ");
+			k=0;
 			}
 		}
-			
-			k=0;
-		}
-		System.out.println("число "+array[i]+" колл "+k+" ");
 		for(int i=0;i<simv.length;i++)
 		{
 		simv[i] = ((int)(Math.random()*25)+97);		
@@ -79,11 +84,11 @@ public class less1 {
 		k=array[i]%2;
 		if(k>0)
 		{
-			m=m+array[i];
+			m+=array[i];
 		}
 		else 
 		{
-			n=n+array[i];
+			n+=array[i];
 		}
 		}
 		System.out.println();
