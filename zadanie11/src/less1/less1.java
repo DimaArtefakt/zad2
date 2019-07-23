@@ -4,6 +4,7 @@ public class Less1 {
 
 	public static void main(String[] args) {
 		int[] array = new int[10];
+		int[] array2 = {1,2,3,4,5};
 		int[] simv = new int[12];		
 		int sum = 1;
 		int k = 0;
@@ -20,23 +21,25 @@ public class Less1 {
 		System.out.println("сумм "+ sum);
 		for(int i=0;i<array.length;i++)
 		{
-			if(k2<5)
-			{
-			k2++;
-			k=0;
+			if(array[i] == 3)
+				k2++;
+		}		
+		System.out.println("число 3 встречается "+ k2 + " раз(a)");
+		
+		for(int i=0;i<array2.length;i++)
+		{			    
 			for(int j=0;j<array.length;j++)
 			{
-				if(array[j] == k2 & k2<6)
-				{
-				k++;				
-				}
-				
+			if(array2[i] == array[j])
+			{
+				k++;
+			}	
 			}
-			
-			System.out.println("число "+k2+" колл "+k+" ");
-			k=0;
-			}
+			System.out.println("число "+array2[i]+" колл "+k+" ");
+			k=0;			
 		}
+		
+		
 		for(int i=0;i<simv.length;i++)
 		{
 		simv[i] = ((int)(Math.random()*25)+97);		
@@ -95,6 +98,11 @@ public class Less1 {
 		System.out.print("сумм чет "+n+" ");
 		System.out.println();
 		System.out.print("сумм не чет "+m+" ");
+		
+		for(int i=4;i<2;i++)
+		{
+			System.out.println("dsg "+i+" ");
+		}
 	}
 
 }
