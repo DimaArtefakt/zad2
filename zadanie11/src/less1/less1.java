@@ -4,7 +4,8 @@ public class Less1 {
 
 	public static void main(String[] args) {
 		int[] array = new int[10];
-		int[] array2 = {1,2,3,4,5};
+		int maxValue = 5;
+		int minValue = 1;
 		int[] simv = new int[12];		
 		int sum = 1;
 		int k = 0;
@@ -26,19 +27,9 @@ public class Less1 {
 		}		
 		System.out.println("число 3 встречается "+ k2 + " раз(a)");
 		
-		for(int i=0;i<array2.length;i++)
-		{			    
-			for(int j=0;j<array.length;j++)
-			{
-			if(array2[i] == array[j])
-			{
-				k++;
-			}	
-			}
-			System.out.println("число "+array2[i]+" колл "+k+" ");
-			k=0;			
-		}
-		
+		int array2[] = new int[maxValue-minValue+1];
+		for(int i=0;i<array.length;i++)array2[array[i]-minValue]++;			
+		for(int i=0;i<array2.length;i++)System.out.println("число "+ minValue++ +" раз"+array2[i]);	
 		
 		for(int i=0;i<simv.length;i++)
 		{
